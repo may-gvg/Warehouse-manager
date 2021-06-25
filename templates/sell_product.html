@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container-fluid no-padding">
+<div class="row">
+<div class="col-md-12">
+<hr/>
+    <hr/>
+<form method="POST" action="{{ url_for(request.endpoint, product_name = product.name) }}">
+<table id="example" class="table table-striped table-bordered" style="width:100%;">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Quantity</th>
+                <th>Unit</th>
+                <th>Price</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{ product.name }}</td>
+                <td>{{ product.quantity }}</td>
+                <td>{{ product.unit }}</td>
+                <td>{{ product.unit_price }}</td>
+                <td></td>
+            </tr>
+            {% for field in form if field.widget.input_type != 'hidden' %}
+                    <td>{{ field }}</td>
+            {% endfor %}
+
+            <td><input type="submit" value="Sell product"></td>
+            </tr>
+        </tbody>
+    </table>
+</form>
+</div>
+</div>
+    </div>
+{% endblock %}
