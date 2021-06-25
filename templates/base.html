@@ -12,11 +12,16 @@
     <!-- Bootstrap core CSS -->
 
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.25/css/dataTables.bootstrap4.min.css">
     <!-- Favicons -->
 <meta name="theme-color" content="#563d7c">
     <!-- Custom styles for this template -->
     <link rel="stylesheet" href="dashboard.css">
+      <script>
+          $(document).ready(function() {
+            $('#example').DataTable();
+          } );
+      </script>
   </head>
   <body>
     <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
